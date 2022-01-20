@@ -1,0 +1,22 @@
+.MyNavBar{
+    color: teal;
+    text-align: center;
+    background-color: gray;
+    height: 100px;
+    width: 100%;
+}
+
+.Link{
+    margin: 10px;
+}
+
+
+.link{
+    margin: 10px;
+    color: black;
+    font-weight: bold;
+    border: 2px dashed black;
+    padding: 5px;
+    font-size: 18px;
+    text-decoration: none;
+}
