@@ -1,0 +1,5 @@
+.MyBlock{
+    width: 500px;
+    height: 200px;
+    box-shadow: 10px 5px 5px gainsboro;
+}

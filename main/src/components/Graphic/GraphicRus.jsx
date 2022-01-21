@@ -1,12 +1,12 @@
 import {React, useState, useEffect} from 'react';
 import { AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, Legend} from 'recharts';
-import PostOnline from '../PostOnline/PostOnline';
+import PostGraphic from '../Api/PostGraphic';
 
 const GraphicRus  = () =>{
     const [data, setData] = useState([])
 
     async function onFetching() {
-        const data = await PostOnline.getAll('https://www.nbrb.by/API/ExRates/Rates/Dynamics/190?startDate=2016-6-1&endDate=2016-6-30')
+        const data = await PostGraphic.getAll('https://www.nbrb.by/API/ExRates/Rates/Dynamics/190?startDate=2016-6-1&endDate=2016-6-30')
         setData(data)
     }
     

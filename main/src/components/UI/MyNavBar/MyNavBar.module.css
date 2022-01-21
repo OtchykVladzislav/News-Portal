@@ -1,7 +1,8 @@
 .MyNavBar{
     color: teal;
     text-align: center;
-    background-color: gray;
+    background-color: wheat;
+    padding: 10px;
     height: 100px;
     width: 100%;
 }

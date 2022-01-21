@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default class PostOnline {
+export default class PostGraphic {
     static async getAll(url){
         try {
             const response = await axios.get(url)

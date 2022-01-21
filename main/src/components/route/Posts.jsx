@@ -8,6 +8,7 @@ import PostOnline from '../Api/PostOnline';
 import MyLoader from '../UI/MyLoader/MyLoader';
 import { useQuery } from '../hooks/useSort';
 import { ButtonsPage, Pages } from '../utils/Pages';
+import Pagination from '../Pagination';
 
 const Posts = () => {
   const [posts, setPost] = useState([]);
@@ -19,8 +20,6 @@ const Posts = () => {
 
   const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(1);
-
-  const pagesArray = ButtonsPage(totalPage);
 
   async function onFetching() {
     setLoader(true)
@@ -60,14 +59,7 @@ const Posts = () => {
               ? <MyLoader/> 
               : <PostList remove={callbackRem} posts={sortedAnDquery}/>
       }
-      {pagesArray.map(p =>
-        <span
-          onClick={() =>changePage(p)}
-          key={p}
-          className={page === p ? 'page page_current' : 'page'}
-        >{p}
-        </span>
-      )}
+      <Pagination totalPage={totalPage} page={page} changePage={changePage}/>
     </div>
   );
 }

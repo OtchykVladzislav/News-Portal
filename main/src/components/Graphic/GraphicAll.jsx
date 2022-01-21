@@ -1,6 +1,6 @@
 import {React,useEffect, useState} from 'react';
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Label, Tooltip, Legend, LabelList} from 'recharts';
-import PostOnline from '../PostOnline/PostOnline';
+import PostGraphic from '../Api/PostGraphic';
 
 
 const GraphicAll = () => {
@@ -8,7 +8,7 @@ const GraphicAll = () => {
     const [data, setData] = useState([])
 
     async function onFetching() {
-        const data = await PostOnline.getAll('https://www.nbrb.by/api/exrates/rates?periodicity=0')
+        const data = await PostGraphic.getAll('https://www.nbrb.by/api/exrates/rates?periodicity=0')
         setData(data)
     }
     
